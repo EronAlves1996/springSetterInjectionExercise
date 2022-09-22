@@ -13,4 +13,10 @@ public class ShoppingCart {
 	public void setItems(List<Item> items) {
 		this.items = items;
 	}
+
+	@Override
+	public String toString() {
+		return "ShoppingCart [items=" + items + "]";
+	}
+	
 }
