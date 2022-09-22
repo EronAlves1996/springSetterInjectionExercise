@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="item1" class="io.eronalves1996.spring.Item" p:id="1"
+		p:name="Sorvete" p:price="5" p:quantity="1" />
+	<bean name="item2" class="io.eronalves1996.spring.Item" p:id="2"
+		p:name="Blusa" p:price="25" p:quantity="3" />
+	<bean name="item3" class="io.eronalves1996.spring.Item" p:id="3"
+		p:name="Pipoca" p:price="10" p:quantity="2" />
+
+	<bean name="shoppingcart"
+		class="io.eronalves1996.spring.ShoppingCart">
+		<property name="items">
+			<list>
+				<value ref="item1" />
+				<value ref="item2" />
+				<value ref="item3" />
+			</list>
+		</property>
+	</bean>
+	
+</beans>
